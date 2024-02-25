@@ -4,16 +4,18 @@
   напишіть скорочену ініціалізацію.
 */
 
-class Student {
-  public name: string;
-  public age: number;
-  public grade: string;
+interface IPerson {
+    name: string;
+    age: number;
+    grade: string;
+}
 
-  constructor(name: string, age: number, grade: string) {
-    this.name = name;
-    this.age = age;
-    this.grade = grade;
-  }
+class Student implements IPerson {
+    constructor(
+        public name: string,
+        public age: number,
+        public grade: string
+    ) {}
 }
 
 export {};
