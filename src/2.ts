@@ -17,8 +17,8 @@
 class Employee {
     constructor(
         protected salary: number,
-        public name?: string,
-        private department?: string
+        public name: string,
+        private department: string
     ) {}
 
     getEmployeeDetails() {
@@ -27,8 +27,12 @@ class Employee {
 }
 
 class Manager extends Employee {
-    constructor(salary: number) {
-        super(salary + 10000);
+    constructor(
+        salary: number,
+        name: string,
+        department: string
+    ) {
+        super(salary + 10000, department, name);
     }
 }
 
